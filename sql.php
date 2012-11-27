@@ -65,7 +65,7 @@ $limit=$add_sql='';
 $bb=(isset($_GET['bb'])) ? $_GET['bb'] : -1;
 if (isset($_POST['tablename'])) $tablename=$_POST['tablename'];
 $search=(isset($_GET['search'])) ? $_GET['search'] : 0;
-
+include ('./inc/sqlbrowser/sql_tables2.php');
 //SQL-Statement geposted
 if (isset($_POST['execsql']))
 {
