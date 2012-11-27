@@ -9,11 +9,6 @@
 			&nbsp;<strong>{LANG_TABLE}:</strong> `<a href="sql.php?db={DB}&amp;dbid={DBID}&amp;tablename={TABLENAME}" title="{LANG_SQL_TABLEVIEW}"><strong>{TABLENAME}</strong></a>`
 			<!-- END TABLE_SELECTED -->
 </p>
-<p>
-	<!-- BEGIN TABLE_LIST -->
-	&nbsp;`<a href="sql.php?db={DB}&amp;dbid={DBID}&amp;tablename={TABLE_NAME}"><strong>{TABLE_NAME}</strong></a>`
-	<!-- END TABLE_LIST -->
-</p>
 <!-- BEGIN SQLUPLOAD -->
 	<form action="{SQLUPLOAD.POSTTARGET}" method="post" enctype="multipart/form-data">
 	<table class="bordersmall">

@@ -65,7 +65,7 @@ $limit=$add_sql='';
 $bb=(isset($_GET['bb'])) ? $_GET['bb'] : -1;
 if (isset($_POST['tablename'])) $tablename=$_POST['tablename'];
 $search=(isset($_GET['search'])) ? $_GET['search'] : 0;
-include ('./inc/sqlbrowser/sql_tables2.php');
+
 //SQL-Statement geposted
 if (isset($_POST['execsql']))
 {
@@ -184,9 +184,7 @@ $showtables=(substr(strtoupper($sql['sql_statement']),0,10)=='SHOW TABLE') ? 1 :
 $tabellenansicht=(substr(strtoupper($sql['sql_statement']),0,5)=='SHOW ') ? 1 : 0;
 
 if (!isset($limitstart)) $limitstart=0;
-if (!isset($_POST['limitende']))
 $limitende=$config['sql_limit'];
-else $limitende=intval($_POST['limitende']);
 if (strtolower(substr($sql['sql_statement'],0,6))=='select') $limit=' LIMIT '.$limitstart.', '.$limitende.';';
 
 $params="sql.php?db=".$db."&amp;tablename=".$tablename."&amp;dbid=".$dbid.'&amp;context='.$context.'&amp;sql_statement='.urlencode($sql['sql_statement']).'&amp;tdc='.$tdcompact.'&amp;showtables='.$showtables;
@@ -298,5 +296,3 @@ function FormHiddenParams()
 	$s.='<input type="hidden" name="orderdir" value="'.$orderdir.'">';
 	return $s;
 }
-
-?>
